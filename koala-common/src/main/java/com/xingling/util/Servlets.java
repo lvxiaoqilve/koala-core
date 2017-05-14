@@ -3,8 +3,6 @@ package com.xingling.util;
 import com.google.common.net.HttpHeaders;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Validate;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
@@ -178,18 +176,6 @@ public class Servlets {
 			}
 		}
 		return queryStringBuilder.toString();
-	}
-
-	/**
-	 * 获取当前请求对象
-	 * @return
-	 */
-	public static HttpServletRequest getRequest(){
-		try{
-			return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-		}catch(Exception e){
-			return null;
-		}
 	}
 	
 	/**
