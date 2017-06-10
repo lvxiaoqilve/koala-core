@@ -23,12 +23,12 @@ public class BaseEntiy {
 	 * 创建者id
 	 */
 	@Column(name = "creator")
-	private Long creator;
+	private String creator;
 	/**
 	 * 修改者id
 	 */
 	@Column(name = "updater")
-	private Long updater;
+	private String updater;
 
 	/**
 	 * 创建时间
